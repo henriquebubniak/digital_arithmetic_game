@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Thu Jun 22 15:47:09 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : projetofinal
+Top-level Entity Name : projetofinal
+Family : MAX 10
+Total logic elements : 286
+    Total combinational functions : 286
+    Dedicated logic registers : 122
+Total registers : 122
+Total pins : 50
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

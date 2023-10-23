@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+entity display4bits is
+    port (
+        number : in std_logic_vector(6 downto 0);
+        hex    : out std_logic_vector(3 downto 0)
+    );
+end entity display4bits;
+
+architecture a_display4bits of display4bits is
+    signal internal_count : unsigned(3 downto 0);
+begin
+    hex(0) <= ;
+end architecture a_display4bits;

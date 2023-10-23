@@ -1,0 +1,35 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity check is
+    port (
+        clock     : in std_logic;
+        entrada   : in std_logic_vector(4 downto 0);
+        correto   : in std_logic_vector(4 downto 0);
+		pulso     : out std_logic
+    );
+end entity check;
+
+architecture a_check of check is
+signal igualdade : std_logic;
+begin
+    process (entrada, correto)
+    begin
+		if entrada = correto then
+			igualdade <= '1';
+        else 
+            igualdeade <= '0';
+		end if;
+    end process; 
+    
+    process (igualdade)
+    begin
+        if igualdade = '1' then
+            pulso <= '1';
+            wait for 200 ms;
+            pulso <= '0';            
+        end if ;
+    end process
+
+end architecture a_check;

@@ -1,0 +1,30 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity contadorDePontos is
+   port (
+      clk       : in std_logic;
+      saida     : out std_logic_vector(4 downto 0)
+   );
+end entity contadorDePontos;
+
+architecture a_contadorDePontos of contadorDePontos is
+signal contador : unsigned(4 downto 0);
+begin
+    process (clk, contador)
+    begin
+      if rising_edge(clk) then
+		   contador <= contador + 1;
+			
+			if contador = "11111" then
+		   	contador <= "00000";
+				
+		   end if;
+      end if;
+		
+   end process; 
+   
+   saida <= contador;
+
+end architecture a_contadorDePontos;
